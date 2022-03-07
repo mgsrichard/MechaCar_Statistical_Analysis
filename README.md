@@ -73,7 +73,7 @@ I propose to analyze how MechaCar compares to their rivals with regard to the ci
 
 I will make a separate comparison analysis of MechaCar vs. each competitor. For each analysis, I will use the following null and alternate hypotheses:
   - H<sub>0</sub> - Null hypothesis: There is no statistical difference between the observed sample mean of MechaCar's mpg and the observed mean of the competitor car's mpg.
-  - H<sub>a</sub> - Alternate hypothesis: There is a statistical difference between the observed sample mean mpg of MechaCar's mpg and the competitor car's observed mpg.
+  - H<sub>a</sub> - Alternate hypothesis: There is a statistical difference between the observed sample mean mpg of MechaCar's mpg and the competitor car's observed mean mpg.
 
 I would use the two sample t-test to test my hypothesis for MechaCar vs. each of it's rivals, because it is used to determine whether the means of two samples are statistically different.
 
