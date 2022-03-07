@@ -66,3 +66,20 @@ As seen above in the testing output, the p-value of 0.04 is less than the signif
 The total dataset, lot 1, and lot 2 have means that are statitically similar to the presumed population mean of 1,500 PSI for the suspension coils. Lot 3, however, is not statistically similar, meaning there is evidence that there is something different about that lot, and something that needs to be checked out.
 
 On the whole, the suspension coils in the total dataset have a mean PSI that is statistically similar to the presumed population mean of 1,500. However, you can see that the 0.06 p-value for the whole population is much closer to the significance level of 0.05 than the p-value for either lot 1 (p-value = 1.0) or lot 2 (p-value = 0.6). That's because the data from lot 3 is pulling the mean of the whole population away from the presumed mean. In general, if your p-value comes in close to the significance level, it might be a good idea to look more closely at your data as we did when we tested by lot. The problem doesn't lie in lots 1 or 2, but in lot 3. Corraborating this are the results from Deliverable 2, where we can see that the summary statistics for lot 3 are different from the other 2 lots.
+
+## Study Design: MechaCar vs. Competition
+
+I propose to analyze how MechaCar compares to their rivals with regard to the city fuel efficiency. This would be my chief concern if I were buying a new car, as it touches on two issues that are very important to me when I buy a car, the ecological impact of my gas powered car, and the amount I will have to pay for gas. I proposes to compare MechaCar to its top 3 perceived rivals on the current market.
+
+I will make a separate comparison analysis of MechaCar vs. each competitor. For each analysis, I will use the following null and alternate hypotheses:
+  - H<sub>0</sub> - Null hypothesis: There is no statistical difference between the observed sample mean of MechaCar's mpg and the observed mean of the competitor car's mpg.
+  - H<sub>a</sub> - Alternate hypothesis: There is a statistical difference between the observed sample mean mpg of MechaCar's mpg and the competitor car's observed mpg.
+
+I would use the two sample t-test to test my hypothesis for MechaCar vs. each of it's rivals, because it is used to determine whether the means of two samples are statistically different.
+
+I would require data on mileage experience for a reasonably large number of each sort of car.
+
+
+
+
+
