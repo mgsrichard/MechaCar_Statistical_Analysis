@@ -3,11 +3,11 @@ Statisitcal analysis in R
 
 ## Linear Regression to Predict MPG
 
-We performed a multiple linear regression to analyze the impact that 5 independent variables have on mpg. The variables are vehicle length, vehicle weight, spoiler angle, ground clearance, and AWD. The null and alternate hypotheses for each of the variables are:
+We performed a multiple linear regression to analyze the impact that 5 independent variables have on mpg. The variables are vehicle length, vehicle weight, spoiler angle, ground clearance, and AWD. The null hypothesis, alternate hypotheses, and significance level are the same for each variable.  They are:
 
-H<sub>0</sub> - Null hypothesis: The slopes/coefficients of each variable (vehicle length, vehicle weight, spoiler angel, ground clearance, and AWD) in the multiple regression model are zero and there is thus no correlation between any of the variables and the mpg.
-
-H<sub>a</sub> - Alternate hypothesis: The slope/coeffiecient of at least one of the variables (vehicle length, vehicle weight, spoiler angel, ground clearance, and AWD) in the multiple regression is non-zero and there is thus some degree of correlation between at least one of the variables and the mpg.
+  - H<sub>0</sub> - Null hypothesis: The slopes/coefficients of each variable (vehicle length, vehicle weight, spoiler angel, ground clearance, and AWD) in the multiple regression model are zero and there is thus no correlation between any of the variables and the mpg.
+  - H<sub>a</sub> - Alternate hypothesis: The slope/coeffiecient of at least one of the variables (vehicle length, vehicle weight, spoiler angel, ground clearance, and AWD) in the multiple regression is non-zero and there is thus some degree of correlation between at least one of the variables and the mpg.
+  - Significance level - 0.05
 
 The outputs of the regression and the summary of the regression are shown below.
 
@@ -36,4 +36,31 @@ The design specifications for the MechaCar suspension coils dictate that the var
 
 In total, the current manufacturing data meet the design specification that the variance of the suspension coils must not exceed 100 pounds per square inch. The total, however, is concealing what is happening on a lot by lot basis as we can see when we look at the results by lot. Lot 3 does not meet the manufacturing specifications, while lots 1 and 2 do meet it. Something is going on with lot 3 that deserves further investigation.
 
+## T-Tests on Suspension Coils
+We were asked in the challenge to perform t-tests to determine if all manufacturing lots and each lot indivifually are statistically different from the presumed population mean of 1,500 pounds per square inch. Since we are comparing the mean of each population to a presumed population mean, I used the one sample t-test, with the presumed population mean mu=1,500. For each of the t-tests, the null hypothesis, alternate hypothesis, and significance level used were the same. They are:
+  - H<sub>0</sub> - Null hypothesis: There is no statistical difference between the observed sample mean and the presumed population mean of 1,500.
+  - H<sub>a</sub> - Alternate hypothesis: There is a statistical difference between the observed sample mean and the presumed population mean of 1,500.
+  - Significance level - 0.05
+ 
+ ### T-test across all manufacturing lots
+![total](https://github.com/mgsrichard/MechaCar_Statistical_Analysis/blob/main/Resources/ttest_total.png)<br>
 
+As seen above in the testing output, the p-value of 0.06 is greater than the significance level of 0.05, therefore there is not sufficient evidence to reject the null hypothesis, and so we conclude that there is no statistical difference between the observed sample mean and the presumed population mean.
+
+### T-test for Lot 1
+![lot1](https://github.com/mgsrichard/MechaCar_Statistical_Analysis/blob/main/Resources/ttest_lot1.png)<br>
+
+As seen above in the testing output, the p-value of 1.0 is greater than the significance level of 0.05, therefore there is not sufficient evidence to reject the null hypothesis, and so we conclude that there is no statistical difference between the observed sample mean and the presumed population mean.
+
+### T-test for Lot 2
+![lot2](https://github.com/mgsrichard/MechaCar_Statistical_Analysis/blob/main/Resources/ttest_lot2.png)<br>
+
+As seen above in the testing output, the p-value of 0.60 is greater than the significance level of 0.05, therefore there is not sufficient evidence to reject the null hypothesis, and so we conclude that there is no statistical difference between the observed sample mean and the presumed population mean.
+
+### T-test for Lot 3
+![lot3](https://github.com/mgsrichard/MechaCar_Statistical_Analysis/blob/main/Resources/ttest_lot3.png)<br>
+
+As seen above in the testing output, the p-value of 0.04 is less than the significance level of 0.05, therefore there is sufficient evidence to reject the null hypothesis and to support the alternate hypothesis, and so we conclude that there <strong>IS</strong> a statistical difference between the observed sample mean and the presumed population mean.
+
+### T-test summary
+On the whole, the suspension coils in the data have a mean PSI that is statistically similar to the presumed population mean of 1,500. However, you can see that the 0.06 p-value for the whole population is much closer to the significance level of 0.05 than the p-value for either lot 1 (p-value = 1.0) or lot 2 (p-value = 0.6). That's because the data from lot 3 is pulling the mean of the whole population away from the presumed mean. In general, if your p-value comes in close to the significance level, it might be a good idea to look more closely at your data as we did when we tested by lot. The problem doesn't lie in lots 1 or 2, but in lot 3. Corraborating this are the results from Deliverable 2, where we can see that the summary statistics for lot 3 are different from the other 2 lots.
